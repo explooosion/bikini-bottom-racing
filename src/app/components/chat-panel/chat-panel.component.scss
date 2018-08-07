@@ -5,17 +5,19 @@
   height: calc(100vh - 3.5rem);
   width: 400px;
   background-color: #333;
-  color: #fff;
 
   .panel-header {
     text-align: center;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    color: #fff;
     box-shadow: #28bc9c 0 0.5px 1px;
   }
 
   .panel-body {
     overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
     height: calc(100% - 7.8rem);
 
     &::-webkit-scrollbar {
@@ -34,6 +36,7 @@
     }
 
     .msg-group {
+      flex-flow: row;
       margin: 1rem;
 
       .msg-avatar {
@@ -45,6 +48,13 @@
       .msg-name {
         margin-right: 0.5rem;
         color: #28bc9c;
+      }
+
+      .msg-content {
+        color: #fff;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
       }
     }
   }

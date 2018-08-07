@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDETAGB05xiUWrie-MSDFKVqmfuKDw3-Sg",
+    authDomain: "bikini-bottom-racing.firebaseapp.com",
+    databaseURL: "https://bikini-bottom-racing.firebaseio.com",
+    projectId: "bikini-bottom-racing",
+    storageBucket: "bikini-bottom-racing.appspot.com",
+  }
 };
 
 /*

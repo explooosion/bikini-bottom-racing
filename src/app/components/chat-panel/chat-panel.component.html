@@ -1,45 +1,26 @@
 <div class="chat-panel">
   <div class="panel-header bg-success p-1">賽況討論區</div>
-  <div class="panel-body">
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">安安你好</span>
+  <div #panel class="panel-body">
+
+    <div class="msg-group row" *ngFor="let item of items | async">
+      <img class="msg-avatar circle" [src]="item.avatar">
+      <span class="msg-name">{{ item.name }}</span>
+      <span class="msg-content">{{ item.content }}</span>
     </div>
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">華麗大賽正式開始</span>
-    </div>
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">我賭小瓜贏</span>
-    </div>
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">樓下廢物</span>
-    </div>
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">五樓帥哥</span>
-    </div>
-    <div class="msg-group row flex-left">
-      <img class="msg-avatar circle" src="http://robby570.tw/img/avatar.png">
-      <span class="msg-name">Robby</span>
-      <span class="msg-content">五樓自肥 嘔嘔嘔嘔嘔</span>
-    </div>
+
   </div>
   <div class="panel-form border-top border-dark-light">
-    <div class="form-group row">
+    <div class="form-group row" *ngIf="isLogin">
       <div class="col md-9 sm-9">
-        <input type="text" placeholder="說點什麼吧...">
+        <input type="text" placeholder="說點什麼吧..." [(ngModel)]="content" (keyup)="keypressMessage($event)">
       </div>
       <div class="col md-3 sm-3">
-        <button type="button" class="btn btn-success ml-3">送出</button>
+        <button type="button" class="btn btn-success ml-3" (click)="sendMessage()">送出</button>
       </div>
+    </div>
+    <div class="form-group row" *ngIf="!isLogin">
+      <p class="text-white mt-1">還沒登入嗎？</p>
+      <app-modal-login (onLogin)="login($event)"></app-modal-login>
     </div>
   </div>
 </div>
