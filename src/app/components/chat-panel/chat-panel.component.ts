@@ -27,15 +27,9 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
 
   public itemsRef: AngularFireList<any>;
   public items: Observable<any>;
-  constructor(private db: AngularFireDatabase) {
-    this.itemsRef = db.list('chat');
-    this.items = this.itemsRef.valueChanges();
-    this.items = this.itemsRef.snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      )
-    );
-  }
+  constructor(
+    private db: AngularFireDatabase,
+  ) { }
 
   ngOnInit() {
     this.scrollToBottom();
@@ -45,26 +39,45 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
     this.scrollToBottom();
   }
 
+  public connect() {
+    this.itemsRef = this.db.list('chat');
+    this.items = this.itemsRef.valueChanges();
+    this.items = this.itemsRef.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    );
+  }
+
   public scrollToBottom(): void {
     try {
       this.messageGroup.nativeElement.scrollTop = this.messageGroup.nativeElement.scrollHeight;
     } catch (err) { }
   }
 
-  public keypressMessage(event) {
-    if (event.keyCode === 13 && this.content !== '') {
-      this.sendMessage();
-      this.content = '';
+  public sendMessage(event) {
+    switch (event.type) {
+      case 'keyup':
+        if (event.keyCode === 13 && this.name !== '') {
+          this.sendEvent();
+          this.content = '';
+        }
+        break;
+      case 'click':
+        this.sendEvent();
+        break;
+      default:
+        break;
     }
   }
 
-  public sendMessage() {
+  public sendEvent() {
     this.message = {
       avatar: this.avatar,
       name: this.name,
       content: this.content,
       time: moment().format(),
-    }
+    };
     this.itemsRef.push(this.message);
   }
 
@@ -74,6 +87,7 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
       this.name = name;
       this.email = email;
       this.isLogin = true;
+      this.connect();
     }
   }
 }

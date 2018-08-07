@@ -7,22 +7,40 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ModalLoginComponent implements OnInit {
 
-  private modelLogin: String = 'modelLogin';
-  private name: String = '';
-  private email: String = '';
-
   @Input() isLogin: Boolean = false;
+  @Output() login: EventEmitter<any> = new EventEmitter<any>();
 
-  @Output() onLogin: EventEmitter<any> = new EventEmitter<any>();
+  private avatar: String = '';
+  private email: String = '';
+  private name: String = '';
 
   constructor() { }
 
   ngOnInit() { }
 
-  public login() {
-    this.isLogin = true;
-    this.onLogin.emit({ status: true, name: this.name, email: this.email });
+  public onLogin(event) {
+    switch (event.type) {
+      case 'keyup':
+        if (event.keyCode === 13 && this.name !== '') {
+          this.loginEvent();
+        }
+        break;
+      case 'click':
+        this.loginEvent();
+        break;
+      default:
+        break;
+    }
   }
 
+  public loginEvent() {
+    this.isLogin = true;
+    this.login.emit({
+      status: true,
+      avatar: this.avatar,
+      name: this.name,
+      email: this.email,
+    });
+  }
 
 }

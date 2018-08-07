@@ -12,15 +12,15 @@
   <div class="panel-form border-top border-dark-light">
     <div class="form-group row" *ngIf="isLogin">
       <div class="col md-9 sm-9">
-        <input type="text" placeholder="說點什麼吧..." [(ngModel)]="content" (keyup)="keypressMessage($event)">
+        <input type="text" placeholder="說點什麼吧..." [(ngModel)]="content" (keyup)="sendMessage($event)">
       </div>
       <div class="col md-3 sm-3">
-        <button type="button" class="btn btn-success ml-3" (click)="sendMessage()">送出</button>
+        <button type="button" class="btn btn-success ml-3" (click)="sendMessage($event)">送出</button>
       </div>
     </div>
     <div class="form-group row" *ngIf="!isLogin">
       <p class="text-white mt-1">還沒登入嗎？</p>
-      <app-modal-login (onLogin)="login($event)"></app-modal-login>
+      <app-modal-login (login)="login($event)"></app-modal-login>
     </div>
   </div>
 </div>

@@ -1,30 +1,38 @@
-<label class="btn btn-success mr" [htmlFor]="modelLogin">登入</label>
-<input class="modal-state" [id]="modelLogin" type="checkbox">
+<label class="btn btn-success" for="modelLogin">登入</label>
+<input class="modal-state" id="modelLogin" type="checkbox">
 <div class="modal">
-  <label class="modal-bg" [htmlFor]="modelLogin"></label>
+  <label class="modal-bg" for="modelLogin"></label>
   <div class="modal-body">
-    <label class="modal-close" [htmlFor]="modelLogin">×</label>
+    <label class="modal-close" for="modelLogin">×</label>
     <h4 class="modal-title">評論登入</h4>
     <div class="modal-text">
       <div class="row">
         <div class="col lg-12 md-12 sm-12">
-          <div class="form-group row">
+          <!-- <div class="form-group row">
             <label class="col md-3 sm-2" for="email">E-mail</label>
             <div class="col md-9 sm-10">
-              <input type="email" [(ngModel)]="email">
+              <input type="email" [(ngModel)]="email" placeholder="您的電子郵件">
+            </div>
+          </div> -->
+          <div class="form-group row">
+            <label class="col md-3 sm-2" for="avatar">
+              <fa-icon icon="user-circle"></fa-icon>大頭貼</label>
+            <div class="col md-9 sm-10">
+              <input type="text" [(ngModel)]="avatar" placeholder="空白則預設">
             </div>
           </div>
           <div class="form-group row">
-            <label class="col md-3 sm-2" for="name">暱稱</label>
+            <label class="col md-3 sm-2" for="name">
+              <fa-icon icon="user"></fa-icon>暱稱</label>
             <div class="col md-9 sm-10">
-              <input type="text" [(ngModel)]="name" placeholder="用什麼稱呼你的?">
+              <input type="text" [(ngModel)]="name" placeholder="用什麼稱呼您呢?" (keyup)="onLogin($event)">
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="float-right">
-      <label class="btn btn-primary" [htmlFor]="modelLogin" (click)="login()">登入</label>
+      <label class="btn btn-success" for="modelLogin" (click)="onLogin($event)">登入</label>
     </div>
   </div>
 </div>
