@@ -7,12 +7,14 @@ import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 import { ChatPanelComponent } from './components/chat-panel/chat-panel.component';
 import { MapComponent } from './components/map/map.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatPanelComponent,
-    MapComponent
+    MapComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
