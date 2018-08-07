@@ -1,0 +1,54 @@
+.chat-panel {
+  position: absolute;
+  right: 0;
+  top: 3.5rem;
+  height: calc(100vh - 3.5rem);
+  width: 400px;
+  background-color: #36393f;
+  color: #fff;
+
+  .panel-header {
+    text-align: center;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    box-shadow: #111 0 0.5px 1px;
+  }
+
+  .panel-body {
+    overflow-y: scroll;
+    height: calc(100% - 2.6rem);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &:hover::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(#111, .8);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background: rgba(#888, .8);
+    }
+
+    .msg-group {
+      margin: 1rem;
+
+      .msg-avatar {
+        margin-right: 1rem;
+        width: 25px;
+        height: 25px;
+      }
+
+      .msg-name {
+        margin-right: 0.5rem;
+        color: #28bc9c;
+      }
+    }
+  }
+}
