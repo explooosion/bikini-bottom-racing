@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav nav-dark fixed split-nav\">\n  <div class=\"nav-brand\">\n    <h5>\n      <a href=\"#\">Bikini-Bottom</a>\n    </h5>\n  </div>\n  <input id=\"toggler\" type=\"checkbox\">\n  <label class=\"nav-toggler\" for=\"toggler\">\n    <div class=\"bar\"></div>\n  </label>\n  <div class=\"nav-collapse\">\n    <ul>\n      <li>\n        <a href=\"#\">Home</a>\n      </li>\n      <li>\n        <a href=\"#\">Docs</a>\n      </li>\n      <li>\n        <a href=\"#\">Github</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<app-map></app-map>\n\n<app-chat-panel></app-chat-panel>\n"
+module.exports = "<app-navbar></app-navbar>\n<app-map></app-map>\n<app-chat-panel></app-chat-panel>\n"
 
 /***/ }),
 
@@ -98,12 +98,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var agm_direction__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(agm_direction__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/chat-panel/chat-panel.component */ "./src/app/components/chat-panel/chat-panel.component.ts");
 /* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -119,7 +121,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                 _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_5__["ChatPanelComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_6__["MapComponent"]
+                _components_map_map_component__WEBPACK_IMPORTED_MODULE_6__["MapComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_7__["NavbarComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -281,6 +284,69 @@ var MapComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MapComponent);
     return MapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/navbar/navbar.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/navbar/navbar.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"nav nav-dark fixed split-nav\">\n  <div class=\"nav-brand\">\n    <h5>\n      <a href=\"http://robby570.tw/bikini-bottom-racing/\">Bikini-Bottom</a>\n    </h5>\n  </div>\n  <input id=\"toggler\" type=\"checkbox\">\n  <label class=\"nav-toggler\" for=\"toggler\">\n    <div class=\"bar\"></div>\n  </label>\n  <div class=\"nav-collapse\">\n    <ul>\n      <li>\n        <a href=\"http://robby570.tw/bikini-bottom-racing/\">Home</a>\n      </li>\n      <li>\n        <a href=\"https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612\"\n          target=\"_blank\">Facebook</a>\n      </li>\n      <li>\n        <a href=\" https://github.com/explooosion/bikini-bottom-racing \" target=\"_blank \">Github</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/navbar/navbar.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/components/navbar/navbar.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/navbar/navbar.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/navbar/navbar.component.ts ***!
+  \*******************************************************/
+/*! exports provided: NavbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NavbarComponent = /** @class */ (function () {
+    function NavbarComponent() {
+    }
+    NavbarComponent.prototype.ngOnInit = function () {
+    };
+    NavbarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-navbar',
+            template: __webpack_require__(/*! ./navbar.component.html */ "./src/app/components/navbar/navbar.component.html"),
+            styles: [__webpack_require__(/*! ./navbar.component.scss */ "./src/app/components/navbar/navbar.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NavbarComponent);
+    return NavbarComponent;
 }());
 
 
