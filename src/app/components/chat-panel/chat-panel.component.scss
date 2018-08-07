@@ -4,29 +4,26 @@
   top: 3.5rem;
   height: calc(100vh - 3.5rem);
   width: 400px;
-  background-color: #36393f;
+  background-color: #333;
   color: #fff;
 
   .panel-header {
     text-align: center;
-    border-top: 1px solid #111;
-    border-bottom: 1px solid #111;
-    box-shadow: #111 0 0.5px 1px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    box-shadow: #28bc9c 0 0.5px 1px;
   }
 
   .panel-body {
     overflow-y: scroll;
-    height: calc(100% - 2.6rem);
+    height: calc(100% - 7.8rem);
 
     &::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    &:hover::-webkit-scrollbar {
-      width: 8px;
+      width: 15px;
     }
 
     &::-webkit-scrollbar-track {
+      height: 90%;
       background: rgba(#111, .8);
     }
 
@@ -49,6 +46,12 @@
         margin-right: 0.5rem;
         color: #28bc9c;
       }
+    }
+  }
+
+  .panel-form {
+    .form-group {
+      padding: 1rem 1rem 0;
     }
   }
 }
