@@ -60,7 +60,9 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
   }
 
   public sendMessage(event) {
-    if (this.msg.content === '') return;
+    if (this.msg.content === '') {
+      return;
+    }
 
     switch (event.type) {
       case 'keyup':

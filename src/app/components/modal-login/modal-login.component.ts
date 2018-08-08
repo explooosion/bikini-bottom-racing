@@ -17,7 +17,7 @@ export class ModalLoginComponent implements OnInit {
     avatar: 'https://i.imgur.com/qsKqlqD.png',
     email: '',
     name: '',
-  }
+  };
 
   constructor(
     public loginService: LoginService,
