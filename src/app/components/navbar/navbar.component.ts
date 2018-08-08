@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LoginService } from '../../services/login.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  private isLogin: Boolean = false;
+
+  constructor(
+    private loginService: LoginService,
+  ) { }
 
   ngOnInit() {
+    const user = this.loginService.getUser();
+    if (typeof user.name !== 'undefined') this.isLogin = true;
   }
 
+  public logout() {
+    this.loginService.deleteUser();
+    window.location.reload();
+  }
 }

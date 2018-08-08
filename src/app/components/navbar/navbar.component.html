@@ -12,7 +12,7 @@
   <div class="nav-collapse">
     <ul>
       <li>
-        <a href="http://robby570.tw/bikini-bottom-racing/">Home</a>
+        <a href="http://robby570.tw/bikini-bottom-racing/">首頁</a>
       </li>
       <li>
         <a href="https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612"
@@ -23,4 +23,5 @@
       </li>
     </ul>
   </div>
+  <button *ngIf="isLogin" class="btn btn-success btn-logout" type="button" (click)="logout()">登出</button>
 </nav>
