@@ -310,7 +310,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<app-map></app-map>\r\n<app-chat-panel></app-chat-panel>\r\n"
+module.exports = "<app-navbar></app-navbar>\n<app-map></app-map>\n<app-chat-panel></app-chat-panel>\n"
 
 /***/ }),
 
@@ -472,7 +472,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-panel\">\n  <div class=\"panel-header bg-success p-1\">\n    <fa-icon icon=\"comments\"></fa-icon>賽況討論區</div>\n  <div #panel class=\"panel-body\">\n\n    <div class=\"msg-group row\" *ngFor=\"let msg of msgs\">\n      <img class=\"msg-avatar circle\" [src]=\"msg.avatar\">\n      <span class=\"msg-name\">{{ msg.name }}</span>\n      <span class=\"msg-content\">\n        {{ msg.content }}\n        <span class=\"msg-time\">{{ msg.time | timeAgo }}</span>\n      </span>\n    </div>\n\n  </div>\n  <div class=\"panel-form border-top border-dark-light\">\n    <div class=\"form-group row\" *ngIf=\"isLogin\">\n      <div class=\"col md-9 sm-9\">\n        <input #txtContent type=\"text\" placeholder=\"說點什麼吧...\" [(ngModel)]=\"msg.content\" (keyup)=\"sendMessage($event)\">\n      </div>\n      <div class=\"col md-3 sm-3\">\n        <button type=\"button\" class=\"btn btn-success ml-3\" (click)=\"sendMessage($event)\">送出</button>\n      </div>\n    </div>\n    <div class=\"form-group row\" *ngIf=\"!isLogin\">\n      <p class=\"text-white mt-1\">還沒登入嗎？</p>\n      <app-modal-login></app-modal-login>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"chat-panel\">\r\n  <div class=\"panel-header bg-success p-1\">\r\n    <fa-icon icon=\"comments\"></fa-icon>賽況討論區</div>\r\n  <div #panel class=\"panel-body\">\r\n\r\n    <div class=\"msg-group row\" *ngFor=\"let msg of msgs\">\r\n      <img class=\"msg-avatar circle\" [src]=\"msg.avatar\">\r\n      <span class=\"msg-name\">{{ msg.name }}</span>\r\n      <span class=\"msg-content\">\r\n        {{ msg.content }}\r\n        <span class=\"msg-time\">{{ msg.time | timeAgo }}</span>\r\n      </span>\r\n    </div>\r\n\r\n  </div>\r\n  <div class=\"panel-form border-top border-dark-light\">\r\n    <div class=\"form-group row\" *ngIf=\"isLogin\">\r\n      <div class=\"col md-9 sm-9\">\r\n        <input #txtContent type=\"text\" placeholder=\"說點什麼吧...\" [(ngModel)]=\"msg.content\" (keyup)=\"sendMessage($event)\">\r\n      </div>\r\n      <div class=\"col md-3 sm-3\">\r\n        <button type=\"button\" class=\"btn btn-success ml-3\" (click)=\"sendMessage($event)\">送出</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group row\" *ngIf=\"!isLogin\">\r\n      <p class=\"text-white mt-1\">還沒登入嗎？</p>\r\n      <app-modal-login></app-modal-login>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -527,14 +527,16 @@ var ChatPanelComponent = /** @class */ (function () {
     ChatPanelComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.scrollToBottom();
+        // Get chat message
+        this.firebaseService.connect()
+            .subscribe(function (msg) { return _this.msgs = msg; });
+        // Get cookies
         this.user = this.loginService.getUser();
         // Login Success
         if (typeof this.user.name !== 'undefined') {
             this.isLogin = true;
             this.msg.avatar = this.user.avatar;
             this.msg.name = this.user.name;
-            this.firebaseService.connect()
-                .subscribe(function (msg) { return _this.msgs = msg; });
         }
     };
     ChatPanelComponent.prototype.ngAfterViewChecked = function () {
@@ -550,8 +552,9 @@ var ChatPanelComponent = /** @class */ (function () {
         catch (err) { }
     };
     ChatPanelComponent.prototype.sendMessage = function (event) {
-        if (this.msg.content === '')
+        if (this.msg.content === '') {
             return;
+        }
         switch (event.type) {
             case 'keyup':
                 if (event.keyCode === 13 && this.msg.name !== '') {
@@ -597,7 +600,7 @@ var ChatPanelComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map #gmap [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\r\n  <agm-direction [origin]=\"origin\" [destination]=\"destination\" [waypoints]=\"waypoints\">\r\n  </agm-direction>\r\n</agm-map>\r\n"
+module.exports = "<agm-map #gmap [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  <agm-direction [origin]=\"origin\" [destination]=\"destination\" [waypoints]=\"waypoints\">\n  </agm-direction>\n</agm-map>\n"
 
 /***/ }),
 
@@ -682,7 +685,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"btn btn-success\" for=\"modelLogin\">\n  <fa-icon icon=\"sign-in-alt\"></fa-icon>登入</label>\n<input class=\"modal-state\" id=\"modelLogin\" type=\"checkbox\">\n<div class=\"modal\">\n  <label class=\"modal-bg\" for=\"modelLogin\"></label>\n  <div class=\"modal-body\">\n    <label class=\"modal-close\" for=\"modelLogin\">×</label>\n    <h4 class=\"modal-title\">評論登入</h4>\n    <div class=\"modal-text\">\n      <div class=\"row\">\n        <div class=\"col lg-12 md-12 sm-12\">\n          <!-- <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"email\">E-mail</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"email\" [(ngModel)]=\"user.email\" placeholder=\"您的電子郵件\">\n            </div>\n          </div> -->\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"avatar\">\n              <fa-icon icon=\"user-circle\"></fa-icon>大頭貼</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"user.avatar\" placeholder=\"空白則預設\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"name\">\n              <fa-icon icon=\"user\"></fa-icon>暱稱</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"user.name\" placeholder=\"用什麼稱呼您呢?\" (keyup)=\"onLogin($event)\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"float-right\">\n      <label class=\"btn btn-success\" for=\"modelLogin\" (click)=\"onLogin($event)\">登入</label>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<label class=\"btn btn-success\" for=\"modelLogin\">\r\n  <fa-icon icon=\"sign-in-alt\"></fa-icon>登入</label>\r\n<input class=\"modal-state\" id=\"modelLogin\" type=\"checkbox\">\r\n<div class=\"modal\">\r\n  <label class=\"modal-bg\" for=\"modelLogin\"></label>\r\n  <div class=\"modal-body\">\r\n    <label class=\"modal-close\" for=\"modelLogin\">×</label>\r\n    <h4 class=\"modal-title\">評論登入</h4>\r\n    <div class=\"modal-text\">\r\n      <div class=\"row\">\r\n        <div class=\"col lg-12 md-12 sm-12\">\r\n          <!-- <div class=\"form-group row\">\r\n            <label class=\"col md-3 sm-2\" for=\"email\">E-mail</label>\r\n            <div class=\"col md-9 sm-10\">\r\n              <input type=\"email\" [(ngModel)]=\"user.email\" placeholder=\"您的電子郵件\">\r\n            </div>\r\n          </div> -->\r\n          <div class=\"form-group row\">\r\n            <label class=\"col md-3 sm-2\" for=\"avatar\">\r\n              <fa-icon icon=\"user-circle\"></fa-icon>大頭貼</label>\r\n            <div class=\"col md-9 sm-10\">\r\n              <input type=\"text\" [(ngModel)]=\"user.avatar\" placeholder=\"空白則預設\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label class=\"col md-3 sm-2\" for=\"name\">\r\n              <fa-icon icon=\"user\"></fa-icon>暱稱</label>\r\n            <div class=\"col md-9 sm-10\">\r\n              <input type=\"text\" [(ngModel)]=\"user.name\" placeholder=\"用什麼稱呼您呢?\" (keyup)=\"onLogin($event)\">\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"float-right\">\r\n      <label class=\"btn btn-success\" for=\"modelLogin\" (click)=\"onLogin($event)\">登入</label>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -777,7 +780,7 @@ var ModalLoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav nav-dark fixed\">\n  <div class=\"nav-brand\">\n    <h5>\n      <a href=\"http://robby570.tw/bikini-bottom-racing/\">\n        <fa-icon icon=\"trophy\"></fa-icon>Bikini-Bottom</a>\n    </h5>\n  </div>\n  <input id=\"toggler\" type=\"checkbox\">\n  <label class=\"nav-toggler\" for=\"toggler\">\n    <div class=\"bar\"></div>\n  </label>\n  <div class=\"nav-collapse\">\n    <ul>\n      <li>\n        <a href=\"http://robby570.tw/bikini-bottom-racing/\">首頁</a>\n      </li>\n      <li>\n        <a href=\"https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612\"\n          target=\"_blank\">Facebook</a>\n      </li>\n      <li>\n        <a href=\" https://github.com/explooosion/bikini-bottom-racing \" target=\"_blank \">Github</a>\n      </li>\n    </ul>\n  </div>\n  <button *ngIf=\"isLogin\" class=\"btn btn-success btn-logout\" type=\"button\" (click)=\"logout()\">登出</button>\n</nav>\n"
+module.exports = "<nav class=\"nav nav-dark fixed\">\r\n  <div class=\"nav-brand\">\r\n    <h5>\r\n      <a href=\"http://robby570.tw/bikini-bottom-racing/\">\r\n        <fa-icon icon=\"trophy\"></fa-icon>Bikini-Bottom</a>\r\n    </h5>\r\n  </div>\r\n  <input id=\"toggler\" type=\"checkbox\">\r\n  <label class=\"nav-toggler\" for=\"toggler\">\r\n    <div class=\"bar\"></div>\r\n  </label>\r\n  <div class=\"nav-collapse\">\r\n    <ul>\r\n      <li>\r\n        <a href=\"http://robby570.tw/bikini-bottom-racing/\">首頁</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612\"\r\n          target=\"_blank\">Facebook</a>\r\n      </li>\r\n      <li>\r\n        <a href=\" https://github.com/explooosion/bikini-bottom-racing \" target=\"_blank \">Github</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <button *ngIf=\"isLogin\" class=\"btn btn-success btn-logout\" type=\"button\" (click)=\"logout()\">登出</button>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1027,7 +1030,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Project\00.Case\20180807-第一屆比集保杯蝸牛賽跑競賽\bikini-bottom-racing\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! F:\Case\20180807-第一屆比奇堡盃蝸牛賽跑競賽\bikini-bottom-racing\src\main.ts */"./src/main.ts");
 
 
 /***/ })
