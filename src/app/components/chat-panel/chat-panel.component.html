@@ -1,18 +1,20 @@
 <div class="chat-panel">
-  <div class="panel-header bg-success p-1">賽況討論區</div>
+  <div class="panel-header bg-success p-1">
+    <fa-icon icon="comments"></fa-icon>賽況討論區</div>
   <div #panel class="panel-body">
 
-    <div class="msg-group row" *ngFor="let item of items | async">
-      <img class="msg-avatar circle" [src]="item.avatar">
-      <span class="msg-name">{{ item.name }}</span>
-      <span class="msg-content">{{ item.content }}</span>
+    <div class="msg-group row" *ngFor="let msg of msgs">
+      <img class="msg-avatar circle" [src]="msg.avatar">
+      <span class="msg-name">{{ msg.name }}</span>
+      <span class="msg-content">{{ msg.content }}</span>
+      <span class="msg-time">{{ msg.time | timeAgo }}</span>
     </div>
 
   </div>
   <div class="panel-form border-top border-dark-light">
     <div class="form-group row" *ngIf="isLogin">
       <div class="col md-9 sm-9">
-        <input type="text" placeholder="說點什麼吧..." [(ngModel)]="content" (keyup)="sendMessage($event)">
+        <input #txtContent type="text" placeholder="說點什麼吧..." [(ngModel)]="msg.content" (keyup)="sendMessage($event)">
       </div>
       <div class="col md-3 sm-3">
         <button type="button" class="btn btn-success ml-3" (click)="sendMessage($event)">送出</button>

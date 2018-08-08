@@ -1,12 +1,10 @@
 import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { LoginService } from '../../services/login.service';
+import { FirebaseService } from '../../services/firebase.service';
 
 import Message from '../../models/message';
-
-import * as moment from 'moment';
+import User from '../../models/user';
 
 @Component({
   selector: 'app-chat-panel',
@@ -16,40 +14,44 @@ import * as moment from 'moment';
 export class ChatPanelComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('panel') private messageGroup: ElementRef;
+  @ViewChild('txtContent') private txtContent: ElementRef;
 
-  public isLogin: Boolean = false;
+  private isLogin: Boolean = false;
+  private user: User;
+  private msg: Message = {
+    avatar: '',
+    name: '',
+    content: '',
+    time: '',
+  };
+  private msgs: [Message];
 
-  public avatar: String = 'http://robby570.tw/img/avatar.png';
-  public name: String = '';
-  public email: String = '';
-  public content: String = '';
-  public message: Message;
-
-  public itemsRef: AngularFireList<any>;
-  public items: Observable<any>;
   constructor(
-    private db: AngularFireDatabase,
+    private loginService: LoginService,
+    private firebaseService: FirebaseService,
   ) { }
 
   ngOnInit() {
     this.scrollToBottom();
+    this.user = this.loginService.getUser();
+
+    // Login Success
+    if (this.user.name !== '') {
+      this.isLogin = true;
+      this.msg.avatar = this.user.avatar;
+      this.msg.name = this.user.name;
+
+      this.firebaseService.connect()
+        .subscribe((msg: [Message]) => this.msgs = msg);
+    }
   }
 
   ngAfterViewChecked() {
     this.scrollToBottom();
+    this.txtContent.nativeElement.placeholder = `${this.user.name} 說點什麼吧...`;
   }
 
-  public connect() {
-    this.itemsRef = this.db.list('chat');
-    this.items = this.itemsRef.valueChanges();
-    this.items = this.itemsRef.snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      )
-    );
-  }
-
-  public scrollToBottom(): void {
+  public scrollToBottom() {
     try {
       this.messageGroup.nativeElement.scrollTop = this.messageGroup.nativeElement.scrollHeight;
     } catch (err) { }
@@ -58,36 +60,25 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
   public sendMessage(event) {
     switch (event.type) {
       case 'keyup':
-        if (event.keyCode === 13 && this.name !== '') {
-          this.sendEvent();
-          this.content = '';
+        if (event.keyCode === 13 && this.msg.name !== '') {
+          this.firebaseService.send(this.msg);
+          this.msg.content = '';
         }
         break;
       case 'click':
-        this.sendEvent();
+        this.firebaseService.send(this.msg);
         break;
       default:
         break;
     }
   }
 
-  public sendEvent() {
-    this.message = {
-      avatar: this.avatar,
-      name: this.name,
-      content: this.content,
-      time: moment().format(),
-    };
-    this.itemsRef.push(this.message);
-  }
-
-  public login(event) {
-    const { status, name, email } = event;
-    if (status) {
-      this.name = name;
-      this.email = email;
-      this.isLogin = true;
-      this.connect();
-    }
+  public login(user: User) {
+    this.isLogin = true;
+    this.user = user;
+    this.msg.avatar = this.user.avatar;
+    this.msg.name = this.user.name;
+    this.firebaseService.connect()
+      .subscribe((msgs: [Message]) => this.msgs = msgs);
   }
 }

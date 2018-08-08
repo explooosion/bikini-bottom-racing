@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import User from '../../models/user';
+
 @Component({
   selector: 'app-modal-login',
   templateUrl: './modal-login.component.html',
@@ -7,40 +9,47 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ModalLoginComponent implements OnInit {
 
-  @Input() isLogin: Boolean = false;
-  @Output() login: EventEmitter<any> = new EventEmitter<any>();
+  @Output() login: EventEmitter<User> = new EventEmitter<User>();
 
-  private avatar: String = '';
-  private email: String = '';
-  private name: String = '';
+  private avatarDefault: String = 'https://i.imgur.com/qsKqlqD.png';
 
-  constructor() { }
+  private user: User = {
+    avatar: 'https://i.imgur.com/qsKqlqD.png',
+    email: '',
+    name: '',
+  }
+
+  constructor(
+  ) { }
 
   ngOnInit() { }
 
   public onLogin(event) {
     switch (event.type) {
       case 'keyup':
-        if (event.keyCode === 13 && this.name !== '') {
-          this.loginEvent();
+        if (event.keyCode === 13 && this.user.name !== '') {
+          return this.loginEvent();
+        } else {
+          return false;
         }
-        break;
       case 'click':
-        this.loginEvent();
-        break;
+        return this.loginEvent();
       default:
-        break;
+        return false;
     }
   }
 
   public loginEvent() {
-    this.isLogin = true;
-    this.login.emit({
-      status: true,
-      avatar: this.avatar,
-      name: this.name,
-      email: this.email,
-    });
+
+    if (this.user.name === '') {
+      alert('請輸入暱稱');
+      return false;
+    }
+    this.user.avatar = this.user.avatar === '' ? this.avatarDefault : this.user.avatar;
+
+    this.loginService.saveUser(this.user);
+    this.login.emit(this.user);
+
   }
 
 }
