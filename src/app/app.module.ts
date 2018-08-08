@@ -10,6 +10,11 @@ import { environment } from '../environments/environment';
 
 import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
+import { TimeAgoPipe } from 'time-ago-pipe';
+import { CookieModule } from 'ngx-cookie';
+
+import { FirebaseService } from './services/firebase.service';
+import { LoginService } from './services/login.service';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -30,7 +35,8 @@ import { ModalLoginComponent } from './components/modal-login/modal-login.compon
     ChatPanelComponent,
     MapComponent,
     NavbarComponent,
-    ModalLoginComponent
+    ModalLoginComponent,
+    TimeAgoPipe,
   ],
   imports: [
     BrowserModule,
@@ -44,8 +50,12 @@ import { ModalLoginComponent } from './components/modal-login/modal-login.compon
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     FontAwesomeModule,
+    CookieModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    FirebaseService,
+    LoginService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
