@@ -36,7 +36,7 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
     this.user = this.loginService.getUser();
 
     // Login Success
-    if (this.user.name !== '') {
+    if (typeof this.user.name !== 'undefined') {
       this.isLogin = true;
       this.msg.avatar = this.user.avatar;
       this.msg.name = this.user.name;
@@ -48,7 +48,9 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
 
   ngAfterViewChecked() {
     this.scrollToBottom();
-    this.txtContent.nativeElement.placeholder = `${this.user.name} 說點什麼吧...`;
+    if (typeof this.user.name !== 'undefined') {
+      this.txtContent.nativeElement.placeholder = `${this.user.name} 說點什麼吧...`;
+    }
   }
 
   public scrollToBottom() {
@@ -58,6 +60,8 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
   }
 
   public sendMessage(event) {
+    if (this.msg.content === '') return;
+
     switch (event.type) {
       case 'keyup':
         if (event.keyCode === 13 && this.msg.name !== '') {
@@ -73,12 +77,4 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  public login(user: User) {
-    this.isLogin = true;
-    this.user = user;
-    this.msg.avatar = this.user.avatar;
-    this.msg.name = this.user.name;
-    this.firebaseService.connect()
-      .subscribe((msgs: [Message]) => this.msgs = msgs);
-  }
 }

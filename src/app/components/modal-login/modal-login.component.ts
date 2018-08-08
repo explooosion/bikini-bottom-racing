@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { LoginService } from '../../services/login.service';
 
 import User from '../../models/user';
 
@@ -9,8 +11,6 @@ import User from '../../models/user';
 })
 export class ModalLoginComponent implements OnInit {
 
-  @Output() login: EventEmitter<User> = new EventEmitter<User>();
-
   private avatarDefault: String = 'https://i.imgur.com/qsKqlqD.png';
 
   private user: User = {
@@ -20,6 +20,7 @@ export class ModalLoginComponent implements OnInit {
   }
 
   constructor(
+    private loginService: LoginService,
   ) { }
 
   ngOnInit() { }
@@ -48,7 +49,7 @@ export class ModalLoginComponent implements OnInit {
     this.user.avatar = this.user.avatar === '' ? this.avatarDefault : this.user.avatar;
 
     this.loginService.saveUser(this.user);
-    this.login.emit(this.user);
+    window.location.reload();
 
   }
 
