@@ -11,16 +11,16 @@ import User from '../../models/user';
 })
 export class ModalLoginComponent implements OnInit {
 
-  private avatarDefault: String = 'https://i.imgur.com/qsKqlqD.png';
+  public avatarDefault: String = 'https://i.imgur.com/qsKqlqD.png';
 
-  private user: User = {
+  public user: User = {
     avatar: 'https://i.imgur.com/qsKqlqD.png',
     email: '',
     name: '',
   }
 
   constructor(
-    private loginService: LoginService,
+    public loginService: LoginService,
   ) { }
 
   ngOnInit() { }

@@ -13,22 +13,22 @@ import User from '../../models/user';
 })
 export class ChatPanelComponent implements OnInit, AfterViewChecked {
 
-  @ViewChild('panel') private messageGroup: ElementRef;
-  @ViewChild('txtContent') private txtContent: ElementRef;
+  @ViewChild('panel') public messageGroup: ElementRef;
+  @ViewChild('txtContent') public txtContent: ElementRef;
 
-  private isLogin: Boolean = false;
-  private user: User;
-  private msg: Message = {
+  public isLogin: Boolean = false;
+  public user: User;
+  public msg: Message = {
     avatar: '',
     name: '',
     content: '',
     time: '',
   };
-  private msgs: [Message];
+  public msgs: [Message];
 
   constructor(
-    private loginService: LoginService,
-    private firebaseService: FirebaseService,
+    public loginService: LoginService,
+    public firebaseService: FirebaseService,
   ) { }
 
   ngOnInit() {
