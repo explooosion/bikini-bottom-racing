@@ -6,8 +6,10 @@
     <div class="msg-group row" *ngFor="let msg of msgs">
       <img class="msg-avatar circle" [src]="msg.avatar">
       <span class="msg-name">{{ msg.name }}</span>
-      <span class="msg-content">{{ msg.content }}</span>
-      <span class="msg-time">{{ msg.time | timeAgo }}</span>
+      <span class="msg-content">
+        {{ msg.content }}
+        <span class="msg-time">{{ msg.time | timeAgo }}</span>
+      </span>
     </div>
 
   </div>
