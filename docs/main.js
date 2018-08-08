@@ -310,7 +310,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<app-map></app-map>\n<app-chat-panel></app-chat-panel>\n"
+module.exports = "<app-navbar></app-navbar>\r\n<app-map></app-map>\r\n<app-chat-panel></app-chat-panel>\r\n"
 
 /***/ }),
 
@@ -381,15 +381,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 /* harmony import */ var agm_direction__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! agm-direction */ "./node_modules/agm-direction/agm-direction.umd.js");
 /* harmony import */ var agm_direction__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(agm_direction__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
-/* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ "./node_modules/@fortawesome/free-regular-svg-icons/index.es.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/chat-panel/chat-panel.component */ "./src/app/components/chat-panel/chat-panel.component.ts");
-/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_modal_login_modal_login_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/modal-login/modal-login.component */ "./src/app/components/modal-login/modal-login.component.ts");
+/* harmony import */ var time_ago_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! time-ago-pipe */ "./node_modules/time-ago-pipe/esm5/time-ago-pipe.js");
+/* harmony import */ var ngx_cookie__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-cookie */ "./node_modules/ngx-cookie/fesm5/ngx-cookie.js");
+/* harmony import */ var _services_firebase_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/firebase.service */ "./src/app/services/firebase.service.ts");
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/login.service */ "./src/app/services/login.service.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ "./node_modules/@fortawesome/free-regular-svg-icons/index.es.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/chat-panel/chat-panel.component */ "./src/app/components/chat-panel/chat-panel.component.ts");
+/* harmony import */ var _components_map_map_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/map/map.component */ "./src/app/components/map/map.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_modal_login_modal_login_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/modal-login/modal-login.component */ "./src/app/components/modal-login/modal-login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -410,7 +414,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_11__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__["fas"], _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_13__["far"]);
+
+
+
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_15__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_16__["fas"], _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_17__["far"]);
 
 
 
@@ -422,11 +430,12 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"],
-                _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_15__["ChatPanelComponent"],
-                _components_map_map_component__WEBPACK_IMPORTED_MODULE_16__["MapComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_17__["NavbarComponent"],
-                _components_modal_login_modal_login_component__WEBPACK_IMPORTED_MODULE_18__["ModalLoginComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_18__["AppComponent"],
+                _components_chat_panel_chat_panel_component__WEBPACK_IMPORTED_MODULE_19__["ChatPanelComponent"],
+                _components_map_map_component__WEBPACK_IMPORTED_MODULE_20__["MapComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_21__["NavbarComponent"],
+                _components_modal_login_modal_login_component__WEBPACK_IMPORTED_MODULE_22__["ModalLoginComponent"],
+                time_ago_pipe__WEBPACK_IMPORTED_MODULE_10__["TimeAgoPipe"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -439,10 +448,14 @@ var AppModule = /** @class */ (function () {
                 angularfire2__WEBPACK_IMPORTED_MODULE_4__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].firebase),
                 angularfire2_auth__WEBPACK_IMPORTED_MODULE_6__["AngularFireAuthModule"],
                 angularfire2_database__WEBPACK_IMPORTED_MODULE_5__["AngularFireDatabaseModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_10__["FontAwesomeModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_14__["FontAwesomeModule"],
+                ngx_cookie__WEBPACK_IMPORTED_MODULE_11__["CookieModule"].forRoot(),
             ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_14__["AppComponent"]]
+            providers: [
+                _services_firebase_service__WEBPACK_IMPORTED_MODULE_12__["FirebaseService"],
+                _services_login_service__WEBPACK_IMPORTED_MODULE_13__["LoginService"],
+            ],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_18__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -459,7 +472,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chat-panel\">\n  <div class=\"panel-header bg-success p-1\">賽況討論區</div>\n  <div #panel class=\"panel-body\">\n\n    <div class=\"msg-group row\" *ngFor=\"let item of items | async\">\n      <img class=\"msg-avatar circle\" [src]=\"item.avatar\">\n      <span class=\"msg-name\">{{ item.name }}</span>\n      <span class=\"msg-content\">{{ item.content }}</span>\n    </div>\n\n  </div>\n  <div class=\"panel-form border-top border-dark-light\">\n    <div class=\"form-group row\" *ngIf=\"isLogin\">\n      <div class=\"col md-9 sm-9\">\n        <input type=\"text\" placeholder=\"說點什麼吧...\" [(ngModel)]=\"content\" (keyup)=\"sendMessage($event)\">\n      </div>\n      <div class=\"col md-3 sm-3\">\n        <button type=\"button\" class=\"btn btn-success ml-3\" (click)=\"sendMessage($event)\">送出</button>\n      </div>\n    </div>\n    <div class=\"form-group row\" *ngIf=\"!isLogin\">\n      <p class=\"text-white mt-1\">還沒登入嗎？</p>\n      <app-modal-login (login)=\"login($event)\"></app-modal-login>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"chat-panel\">\n  <div class=\"panel-header bg-success p-1\">\n    <fa-icon icon=\"comments\"></fa-icon>賽況討論區</div>\n  <div #panel class=\"panel-body\">\n\n    <div class=\"msg-group row\" *ngFor=\"let msg of msgs\">\n      <img class=\"msg-avatar circle\" [src]=\"msg.avatar\">\n      <span class=\"msg-name\">{{ msg.name }}</span>\n      <span class=\"msg-content\">{{ msg.content }}</span>\n      <span class=\"msg-time\">{{ msg.time | timeAgo }}</span>\n    </div>\n\n  </div>\n  <div class=\"panel-form border-top border-dark-light\">\n    <div class=\"form-group row\" *ngIf=\"isLogin\">\n      <div class=\"col md-9 sm-9\">\n        <input #txtContent type=\"text\" placeholder=\"說點什麼吧...\" [(ngModel)]=\"msg.content\" (keyup)=\"sendMessage($event)\">\n      </div>\n      <div class=\"col md-3 sm-3\">\n        <button type=\"button\" class=\"btn btn-success ml-3\" (click)=\"sendMessage($event)\">送出</button>\n      </div>\n    </div>\n    <div class=\"form-group row\" *ngIf=\"!isLogin\">\n      <p class=\"text-white mt-1\">還沒登入嗎？</p>\n      <app-modal-login></app-modal-login>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -470,7 +483,7 @@ module.exports = "<div class=\"chat-panel\">\n  <div class=\"panel-header bg-suc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".chat-panel {\n  position: absolute;\n  right: 0;\n  top: 3.5rem;\n  height: calc(100vh - 3.5rem);\n  width: 400px;\n  background-color: #333; }\n  .chat-panel .panel-header {\n    text-align: center;\n    font-size: 1.2rem;\n    letter-spacing: 1px;\n    color: #fff;\n    box-shadow: #28bc9c 0 0.5px 1px; }\n  .chat-panel .panel-body {\n    overflow-y: scroll;\n    overflow-x: hidden;\n    width: 100%;\n    height: calc(100% - 7.8rem); }\n  .chat-panel .panel-body::-webkit-scrollbar {\n      width: 15px; }\n  .chat-panel .panel-body::-webkit-scrollbar-track {\n      height: 90%;\n      background: rgba(17, 17, 17, 0.8); }\n  .chat-panel .panel-body::-webkit-scrollbar-thumb {\n      border-radius: 4px;\n      background: rgba(136, 136, 136, 0.8); }\n  .chat-panel .panel-body .msg-group {\n      flex-flow: row;\n      margin: 1rem; }\n  .chat-panel .panel-body .msg-group .msg-avatar {\n        margin-right: 1rem;\n        width: 25px;\n        height: 25px; }\n  .chat-panel .panel-body .msg-group .msg-name {\n        margin-right: 0.5rem;\n        color: #28bc9c; }\n  .chat-panel .panel-body .msg-group .msg-content {\n        color: #fff;\n        overflow-wrap: break-word;\n        word-wrap: break-word;\n        word-break: break-word; }\n  .chat-panel .panel-form .form-group {\n    padding: 1rem 1rem 0; }\n"
+module.exports = ".chat-panel {\n  position: absolute;\n  right: 0;\n  top: 3.5rem;\n  height: calc(100vh - 3.5rem);\n  width: 400px;\n  background-color: #333; }\n  .chat-panel .panel-header {\n    text-align: center;\n    font-size: 1.2rem;\n    letter-spacing: 1px;\n    color: #fff;\n    box-shadow: #28bc9c 0 0.5px 1px; }\n  .chat-panel .panel-body {\n    overflow-y: scroll;\n    overflow-x: hidden;\n    width: 100%;\n    height: calc(100% - 7.8rem); }\n  .chat-panel .panel-body::-webkit-scrollbar {\n      width: 15px; }\n  .chat-panel .panel-body::-webkit-scrollbar-track {\n      height: 90%;\n      background: rgba(17, 17, 17, 0.8); }\n  .chat-panel .panel-body::-webkit-scrollbar-thumb {\n      border-radius: 4px;\n      background: rgba(136, 136, 136, 0.8); }\n  .chat-panel .panel-body .msg-group {\n      flex-flow: row;\n      margin: 1rem; }\n  .chat-panel .panel-body .msg-group .msg-avatar {\n        margin-right: 1rem;\n        width: 25px;\n        height: 25px; }\n  .chat-panel .panel-body .msg-group .msg-name {\n        margin-right: 0.5rem;\n        color: #28bc9c; }\n  .chat-panel .panel-body .msg-group .msg-content {\n        color: #fff;\n        overflow-wrap: break-word;\n        word-wrap: break-word;\n        word-break: break-word; }\n  .chat-panel .panel-body .msg-group .msg-time {\n        margin-left: .5rem;\n        color: #666;\n        font-size: .8rem;\n        line-height: 2rem; }\n  .chat-panel .panel-form .form-group {\n    padding: 1rem 1rem 0; }\n"
 
 /***/ }),
 
@@ -485,18 +498,8 @@ module.exports = ".chat-panel {\n  position: absolute;\n  right: 0;\n  top: 3.5r
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPanelComponent", function() { return ChatPanelComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/login.service */ "./src/app/services/login.service.ts");
+/* harmony import */ var _services_firebase_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/firebase.service */ "./src/app/services/firebase.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -509,28 +512,36 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var ChatPanelComponent = /** @class */ (function () {
-    function ChatPanelComponent(db) {
-        this.db = db;
+    function ChatPanelComponent(loginService, firebaseService) {
+        this.loginService = loginService;
+        this.firebaseService = firebaseService;
         this.isLogin = false;
-        this.avatar = 'http://robby570.tw/img/avatar.png';
-        this.name = '';
-        this.email = '';
-        this.content = '';
+        this.msg = {
+            avatar: '',
+            name: '',
+            content: '',
+            time: '',
+        };
     }
     ChatPanelComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.scrollToBottom();
+        this.user = this.loginService.getUser();
+        // Login Success
+        if (typeof this.user.name !== 'undefined') {
+            this.isLogin = true;
+            this.msg.avatar = this.user.avatar;
+            this.msg.name = this.user.name;
+            this.firebaseService.connect()
+                .subscribe(function (msg) { return _this.msgs = msg; });
+        }
     };
     ChatPanelComponent.prototype.ngAfterViewChecked = function () {
         this.scrollToBottom();
-    };
-    ChatPanelComponent.prototype.connect = function () {
-        this.itemsRef = this.db.list('chat');
-        this.items = this.itemsRef.valueChanges();
-        this.items = this.itemsRef.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
-            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
-        }));
+        if (typeof this.user.name !== 'undefined') {
+            this.txtContent.nativeElement.placeholder = this.user.name + " \u8AAA\u9EDE\u4EC0\u9EBC\u5427...";
+        }
     };
     ChatPanelComponent.prototype.scrollToBottom = function () {
         try {
@@ -539,49 +550,38 @@ var ChatPanelComponent = /** @class */ (function () {
         catch (err) { }
     };
     ChatPanelComponent.prototype.sendMessage = function (event) {
+        if (this.msg.content === '')
+            return;
         switch (event.type) {
             case 'keyup':
-                if (event.keyCode === 13 && this.name !== '') {
-                    this.sendEvent();
-                    this.content = '';
+                if (event.keyCode === 13 && this.msg.name !== '') {
+                    this.firebaseService.send(this.msg);
+                    this.msg.content = '';
                 }
                 break;
             case 'click':
-                this.sendEvent();
+                this.firebaseService.send(this.msg);
                 break;
             default:
                 break;
-        }
-    };
-    ChatPanelComponent.prototype.sendEvent = function () {
-        this.message = {
-            avatar: this.avatar,
-            name: this.name,
-            content: this.content,
-            time: moment__WEBPACK_IMPORTED_MODULE_3__().format(),
-        };
-        this.itemsRef.push(this.message);
-    };
-    ChatPanelComponent.prototype.login = function (event) {
-        var status = event.status, name = event.name, email = event.email;
-        if (status) {
-            this.name = name;
-            this.email = email;
-            this.isLogin = true;
-            this.connect();
         }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('panel'),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
     ], ChatPanelComponent.prototype, "messageGroup", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('txtContent'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], ChatPanelComponent.prototype, "txtContent", void 0);
     ChatPanelComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-chat-panel',
             template: __webpack_require__(/*! ./chat-panel.component.html */ "./src/app/components/chat-panel/chat-panel.component.html"),
             styles: [__webpack_require__(/*! ./chat-panel.component.scss */ "./src/app/components/chat-panel/chat-panel.component.scss")]
         }),
-        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [_services_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"],
+            _services_firebase_service__WEBPACK_IMPORTED_MODULE_2__["FirebaseService"]])
     ], ChatPanelComponent);
     return ChatPanelComponent;
 }());
@@ -597,7 +597,7 @@ var ChatPanelComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map #gmap [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  <agm-direction [origin]=\"origin\" [destination]=\"destination\" [waypoints]=\"waypoints\">\n  </agm-direction>\n</agm-map>\n"
+module.exports = "<agm-map #gmap [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\r\n  <agm-direction [origin]=\"origin\" [destination]=\"destination\" [waypoints]=\"waypoints\">\r\n  </agm-direction>\r\n</agm-map>\r\n"
 
 /***/ }),
 
@@ -682,7 +682,7 @@ var MapComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label class=\"btn btn-success\" for=\"modelLogin\">登入</label>\n<input class=\"modal-state\" id=\"modelLogin\" type=\"checkbox\">\n<div class=\"modal\">\n  <label class=\"modal-bg\" for=\"modelLogin\"></label>\n  <div class=\"modal-body\">\n    <label class=\"modal-close\" for=\"modelLogin\">×</label>\n    <h4 class=\"modal-title\">評論登入</h4>\n    <div class=\"modal-text\">\n      <div class=\"row\">\n        <div class=\"col lg-12 md-12 sm-12\">\n          <!-- <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"email\">E-mail</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"email\" [(ngModel)]=\"email\" placeholder=\"您的電子郵件\">\n            </div>\n          </div> -->\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"avatar\">\n              <fa-icon icon=\"user-circle\"></fa-icon>大頭貼</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"avatar\" placeholder=\"空白則預設\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"name\">\n              <fa-icon icon=\"user\"></fa-icon>暱稱</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"name\" placeholder=\"用什麼稱呼您呢?\" (keyup)=\"onLogin($event)\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"float-right\">\n      <label class=\"btn btn-success\" for=\"modelLogin\" (click)=\"onLogin($event)\">登入</label>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<label class=\"btn btn-success\" for=\"modelLogin\">\n  <fa-icon icon=\"sign-in-alt\"></fa-icon>登入</label>\n<input class=\"modal-state\" id=\"modelLogin\" type=\"checkbox\">\n<div class=\"modal\">\n  <label class=\"modal-bg\" for=\"modelLogin\"></label>\n  <div class=\"modal-body\">\n    <label class=\"modal-close\" for=\"modelLogin\">×</label>\n    <h4 class=\"modal-title\">評論登入</h4>\n    <div class=\"modal-text\">\n      <div class=\"row\">\n        <div class=\"col lg-12 md-12 sm-12\">\n          <!-- <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"email\">E-mail</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"email\" [(ngModel)]=\"user.email\" placeholder=\"您的電子郵件\">\n            </div>\n          </div> -->\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"avatar\">\n              <fa-icon icon=\"user-circle\"></fa-icon>大頭貼</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"user.avatar\" placeholder=\"空白則預設\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n            <label class=\"col md-3 sm-2\" for=\"name\">\n              <fa-icon icon=\"user\"></fa-icon>暱稱</label>\n            <div class=\"col md-9 sm-10\">\n              <input type=\"text\" [(ngModel)]=\"user.name\" placeholder=\"用什麼稱呼您呢?\" (keyup)=\"onLogin($event)\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"float-right\">\n      <label class=\"btn btn-success\" for=\"modelLogin\" (click)=\"onLogin($event)\">登入</label>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -693,7 +693,7 @@ module.exports = "<label class=\"btn btn-success\" for=\"modelLogin\">登入</la
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "fa-icon {\n  margin-right: .5rem; }\n"
+module.exports = ""
 
 /***/ }),
 
@@ -708,6 +708,7 @@ module.exports = "fa-icon {\n  margin-right: .5rem; }\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalLoginComponent", function() { return ModalLoginComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/login.service */ "./src/app/services/login.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -718,53 +719,49 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ModalLoginComponent = /** @class */ (function () {
-    function ModalLoginComponent() {
-        this.isLogin = false;
-        this.login = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.avatar = '';
-        this.email = '';
-        this.name = '';
+    function ModalLoginComponent(loginService) {
+        this.loginService = loginService;
+        this.avatarDefault = 'https://i.imgur.com/qsKqlqD.png';
+        this.user = {
+            avatar: 'https://i.imgur.com/qsKqlqD.png',
+            email: '',
+            name: '',
+        };
     }
     ModalLoginComponent.prototype.ngOnInit = function () { };
     ModalLoginComponent.prototype.onLogin = function (event) {
         switch (event.type) {
             case 'keyup':
-                if (event.keyCode === 13 && this.name !== '') {
-                    this.loginEvent();
+                if (event.keyCode === 13 && this.user.name !== '') {
+                    return this.loginEvent();
                 }
-                break;
+                else {
+                    return false;
+                }
             case 'click':
-                this.loginEvent();
-                break;
+                return this.loginEvent();
             default:
-                break;
+                return false;
         }
     };
     ModalLoginComponent.prototype.loginEvent = function () {
-        this.isLogin = true;
-        this.login.emit({
-            status: true,
-            avatar: this.avatar,
-            name: this.name,
-            email: this.email,
-        });
+        if (this.user.name === '') {
+            alert('請輸入暱稱');
+            return false;
+        }
+        this.user.avatar = this.user.avatar === '' ? this.avatarDefault : this.user.avatar;
+        this.loginService.saveUser(this.user);
+        window.location.reload();
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Boolean)
-    ], ModalLoginComponent.prototype, "isLogin", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
-    ], ModalLoginComponent.prototype, "login", void 0);
     ModalLoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-modal-login',
             template: __webpack_require__(/*! ./modal-login.component.html */ "./src/app/components/modal-login/modal-login.component.html"),
             styles: [__webpack_require__(/*! ./modal-login.component.scss */ "./src/app/components/modal-login/modal-login.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"]])
     ], ModalLoginComponent);
     return ModalLoginComponent;
 }());
@@ -780,7 +777,7 @@ var ModalLoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav nav-dark fixed\">\r\n  <div class=\"nav-brand\">\r\n    <h5>\r\n      <a href=\"http://robby570.tw/bikini-bottom-racing/\">Bikini-Bottom</a>\r\n    </h5>\r\n  </div>\r\n  <input id=\"toggler\" type=\"checkbox\">\r\n  <label class=\"nav-toggler\" for=\"toggler\">\r\n    <div class=\"bar\"></div>\r\n  </label>\r\n  <div class=\"nav-collapse\">\r\n    <ul>\r\n      <li>\r\n        <a href=\"http://robby570.tw/bikini-bottom-racing/\">Home</a>\r\n      </li>\r\n      <li>\r\n        <a href=\"https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612\"\r\n          target=\"_blank\">Facebook</a>\r\n      </li>\r\n      <li>\r\n        <a href=\" https://github.com/explooosion/bikini-bottom-racing \" target=\"_blank \">Github</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"nav nav-dark fixed\">\n  <div class=\"nav-brand\">\n    <h5>\n      <a href=\"http://robby570.tw/bikini-bottom-racing/\">\n        <fa-icon icon=\"trophy\"></fa-icon>Bikini-Bottom</a>\n    </h5>\n  </div>\n  <input id=\"toggler\" type=\"checkbox\">\n  <label class=\"nav-toggler\" for=\"toggler\">\n    <div class=\"bar\"></div>\n  </label>\n  <div class=\"nav-collapse\">\n    <ul>\n      <li>\n        <a href=\"http://robby570.tw/bikini-bottom-racing/\">首頁</a>\n      </li>\n      <li>\n        <a href=\"https://www.facebook.com/events/331488503991495/permalink/469067673566910/?notif_t=feedback_reaction_generic&notif_id=1533579226179612\"\n          target=\"_blank\">Facebook</a>\n      </li>\n      <li>\n        <a href=\" https://github.com/explooosion/bikini-bottom-racing \" target=\"_blank \">Github</a>\n      </li>\n    </ul>\n  </div>\n  <button *ngIf=\"isLogin\" class=\"btn btn-success btn-logout\" type=\"button\" (click)=\"logout()\">登出</button>\n</nav>\n"
 
 /***/ }),
 
@@ -791,7 +788,7 @@ module.exports = "<nav class=\"nav nav-dark fixed\">\r\n  <div class=\"nav-brand
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".btn-logout {\n  position: absolute;\n  right: 1rem; }\n"
 
 /***/ }),
 
@@ -806,6 +803,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarComponent", function() { return NavbarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/login.service */ "./src/app/services/login.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -816,10 +814,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent() {
+    function NavbarComponent(loginService) {
+        this.loginService = loginService;
+        this.isLogin = false;
     }
     NavbarComponent.prototype.ngOnInit = function () {
+        var user = this.loginService.getUser();
+        if (typeof user.name !== 'undefined')
+            this.isLogin = true;
+    };
+    NavbarComponent.prototype.logout = function () {
+        this.loginService.deleteUser();
+        window.location.reload();
     };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -827,9 +835,125 @@ var NavbarComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./navbar.component.html */ "./src/app/components/navbar/navbar.component.html"),
             styles: [__webpack_require__(/*! ./navbar.component.scss */ "./src/app/components/navbar/navbar.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_login_service__WEBPACK_IMPORTED_MODULE_1__["LoginService"]])
     ], NavbarComponent);
     return NavbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/firebase.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/firebase.service.ts ***!
+  \**********************************************/
+/*! exports provided: FirebaseService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FirebaseService", function() { return FirebaseService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FirebaseService = /** @class */ (function () {
+    function FirebaseService(db) {
+        this.db = db;
+        this.dbName = 'chat';
+    }
+    FirebaseService.prototype.connect = function () {
+        this.itemsRef = this.db.list(this.dbName);
+        this.items = this.itemsRef.valueChanges();
+        this.items = this.itemsRef.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        }));
+        return this.items;
+    };
+    FirebaseService.prototype.send = function (message) {
+        message.time = moment__WEBPACK_IMPORTED_MODULE_3__().format();
+        this.itemsRef.push(message);
+    };
+    FirebaseService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+    ], FirebaseService);
+    return FirebaseService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/login.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/login.service.ts ***!
+  \*******************************************/
+/*! exports provided: LoginService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginService", function() { return LoginService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-cookie */ "./node_modules/ngx-cookie/fesm5/ngx-cookie.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LoginService = /** @class */ (function () {
+    function LoginService(cookieService) {
+        this.cookieService = cookieService;
+        this.key = 'user';
+    }
+    LoginService.prototype.getUser = function () {
+        return JSON.parse(this.cookieService.get(this.key) || '{}');
+    };
+    LoginService.prototype.saveUser = function (user) {
+        this.cookieService.putObject(this.key, user);
+    };
+    LoginService.prototype.deleteUser = function () {
+        this.cookieService.remove(this.key);
+    };
+    LoginService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [ngx_cookie__WEBPACK_IMPORTED_MODULE_1__["CookieService"]])
+    ], LoginService);
+    return LoginService;
 }());
 
 
@@ -903,7 +1027,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! F:\Case\20180807-第一屆比奇堡盃蝸牛賽跑競賽\bikini-bottom-racing\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Project\00.Case\20180807-第一屆比集保杯蝸牛賽跑競賽\bikini-bottom-racing\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -48,7 +48,7 @@ module.exports = "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/no
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nhtml,\nbody {\n  padding: 0;\n  margin: 0; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nhtml,\nbody {\n  padding: 0;\n  margin: 0; }\nhtml fa-icon,\n  body fa-icon {\n    margin-right: .5rem; }\n"
 
 /***/ }),
 
@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\Case\20180807-第一屆比奇堡盃蝸牛賽跑競賽\bikini-bottom-racing\src\styles.scss */"./src/styles.scss");
-module.exports = __webpack_require__(/*! F:\Case\20180807-第一屆比奇堡盃蝸牛賽跑競賽\bikini-bottom-racing\node_modules\etherealcss\dist\ethereal.min.css */"./node_modules/etherealcss/dist/ethereal.min.css");
+__webpack_require__(/*! D:\Project\00.Case\20180807-第一屆比集保杯蝸牛賽跑競賽\bikini-bottom-racing\src\styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! D:\Project\00.Case\20180807-第一屆比集保杯蝸牛賽跑競賽\bikini-bottom-racing\node_modules\etherealcss\dist\ethereal.min.css */"./node_modules/etherealcss/dist/ethereal.min.css");
 
 
 /***/ })
