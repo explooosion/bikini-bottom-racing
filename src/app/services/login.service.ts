@@ -16,7 +16,7 @@ export class LoginService {
   }
 
   public getUser(): User {
-    return JSON.parse(this.cookieService.get(this.key));
+    return JSON.parse(this.cookieService.get(this.key) || '{}');
   }
 
   public saveUser(user: User) {
