@@ -33,6 +33,12 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.scrollToBottom();
+
+    // Get chat message
+    this.firebaseService.connect()
+      .subscribe((msg: [Message]) => this.msgs = msg);
+
+    // Get cookies
     this.user = this.loginService.getUser();
 
     // Login Success
@@ -40,9 +46,6 @@ export class ChatPanelComponent implements OnInit, AfterViewChecked {
       this.isLogin = true;
       this.msg.avatar = this.user.avatar;
       this.msg.name = this.user.name;
-
-      this.firebaseService.connect()
-        .subscribe((msg: [Message]) => this.msgs = msg);
     }
   }
 
